@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 03</title>
+</head>
+<body>
+    <script>
+        //=============Math expressions================
+//         1. Write a program to take a number in a variable, do the
+// required arithmetic to display the following result in your
+// browser:
+var num = +prompt("Enter a number");
+document.write("<h1>Result:</h1>");
+document.write("The value of num is: " + num);
+document.write("<br>The value of ++num is: " + ++num);
+document.write("<br>The value of num++ is: " + num++);
+document.write("<br>The value of --num is: " + --num);
+document.write("<br>The value of num-- is: " + num--);
+
+// 2. What will be the output in variables a, b & result after
+// execution of the following script:
+// var a = 2, b = 1;
+// var result = --a - --b + ++b + b--;
+// Explain the output at each stage:
+// --a;
+// --a - --b;
+// --a - --b + ++b;
+// --a - --b + ++b + b--;
+
+var a= 2, b = 1;
+document.write("<P>a is :"+a +"</P>");
+document.write("<P>b is :"+b +"</P>");
+var result = --a - --b + ++b + b--;
+document.write("<P>result is :"+result +"</P>");
+
+// 3. Write a program that takes input a name from user &
+// greet the user.
+
+var userName = prompt("Enter your name", "John Doe");
+document.write("<h1>Welcome, " + userName + "!</h1>");
+
+// 4.
+// 5. Write a program to take input a number from user &
+// display it’s multiplication table on your browser. If user
+// does not enter a new number, multiplication table of 5
+// should be displayed by default.
+var userInput = +prompt("Enter a number to display its multiplication table:", "5");
+
+document.write("<h2>Multiplication Table of " + userInput + ":</h2>");
+document.write("<h1>Table of " + userInput + "</h1>");
+document.write("<h2>" + userInput + " x 1 = " + (userInput * 1) + "</h2>");
+document.write("<h2>" + userInput + " x 2 = " + (userInput * 2) + "</h2>");
+document.write("<h2>" + userInput + " x 3 = " + (userInput * 3) + "</h2>");
+document.write("<h2>" + userInput + " x 4 = " + (userInput * 4) + "</h2>");
+document.write("<h2>" + userInput + " x 5 = " + (userInput * 5) + "</h2>");
+document.write("<h2>" + userInput + " x 6 = " + (userInput * 6) + "</h2>");
+document.write("<h2>" + userInput + " x 7 = " + (userInput * 7) + "</h2>");
+document.write("<h2>" + userInput + " x 8 = " + (userInput * 8) + "</h2>");
+document.write("<h2>" + userInput + " x 9 = " + (userInput * 9) + "</h2>");
+document.write("<h2>" + userInput + " x 10 = " + (userInput * 10) + "</h2>");
+
+// 6. Take
+// a) Take three subjects name from user and store them in 3
+// different variables.
+// b) Total marks for each subject is 100, store it in another
+// variable.
+// c) Take obtained marks for first subject from user and
+// stored it in different variable.
+// d) Take obtained marks for remaining 2 subjects from user
+// and store them in variables.
+// e) Now calculate total marks and percentage and show the
+// result in browser like this.(Hint: user table)
+
+var subject1 = prompt("Enter the name of the first subject:", "Mathematics");
+var subject2 = prompt("Enter the name of the second subject:", "Physics");
+var subject3 = prompt("Enter the name of the third subject:", "Chemistry");
+
+var totalMarks = 100;
+var obtainedMarks1 = +prompt("Enter obtained marks for " + subject1 + ":", "0");
+var obtainedMarks2 = +prompt("Enter obtained marks for " + subject2 + ":", "0");
+var obtainedMarks3 = +prompt("Enter obtained marks for " + subject3 + ":", "0");
+var percentage1= (obtainedMarks1 / totalMarks) * 100;
+var percentage2= (obtainedMarks2 / totalMarks) * 100;   
+var percentage3= (obtainedMarks3 / totalMarks) * 100;
+var average = (percentage1 + percentage2 + percentage3) / 3;
+var totalObtained = obtainedMarks1 + obtainedMarks2 + obtainedMarks3;
+
+document.write("<h1>Subject Marks</h1>");
+document.write("<table border='1'>");
+document.write("<tr><th>Subject</th><th>Total Marks</th><th>Obtained Marks</th><th>Percentage</th></tr>");
+document.write("<tr><td>" + subject1 + "</td><td>" + totalMarks + "</td><td>" + obtainedMarks1 + "</td><td>" + percentage1 + "%</td></tr>");
+document.write("<tr><td>" + subject2 + "</td><td>" + totalMarks + "</td><td>" + obtainedMarks2 + "</td><td>" + percentage2 + "%</td></tr>");
+document.write("<tr><td>" + subject3 + "</td><td>" + totalMarks + "</td><td>" + obtainedMarks3 + "</td><td>" + percentage3 + "%</td></tr>");
+document.write("<tr><td></td><td>" + totalMarks * 3 + "</td><td>" + totalObtained + "</td><td>" + average + "%</td></tr>");
+document.write("</table>");
+    </script>
+</body> 
+</html>
